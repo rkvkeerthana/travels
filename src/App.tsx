@@ -4,12 +4,12 @@ import PopularDestination from "./components/PopularDestination/PopularDestinati
 import Services from "./components/Services/Services";
 import Packages from "./components/Packages";
 /*import Testimonials from "./components/Testimonials";*/
-import StorySection from "./components/StorySection";
+/*import StorySection from "./components/StorySection";*/
 import ExploreSection from "./components/ExploreSection/ExploreSection";
 import ReviewsSection from "./components/ReviewsSection";
 import StepsSection from "./components/YourDreams/StepsSection";
 import Footer from "./components/Footer/Footer";
-import JourneyCTA from "./components/Journey/JourneyCTA";
+/*import JourneyCTA from "./components/Journey/JourneyCTA";*/
 import TrustSection from "./components/Trust/TrustSection";
 import "./App.css";
 /*import PropertyDetails from "./components/Popup_Page/PropertyDetails";*/
@@ -21,7 +21,7 @@ function App() {
         <Hero />
         <Stats />
         <PopularDestination />
-        <StorySection />
+        {/*<StorySection />*/}
 
         <Services />
         <Packages />
@@ -32,7 +32,7 @@ function App() {
         <TrustSection />
         <ExploreSection />
         <ReviewsSection />
-        <JourneyCTA />
+        {/*<JourneyCTA />*/}
 
         <Footer />
       </div>
