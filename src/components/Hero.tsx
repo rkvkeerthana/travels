@@ -1,26 +1,14 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import "../css/Hero.css";
 import mountainImg from "../assets/beautiful-landscape-with-blue-sky.jpg.jpeg";
 
-
-const heroImages = [mountainImg];
-
 const Hero: React.FC = () => {
-  const [current, setCurrent] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrent((prev) => (prev + 1) % heroImages.length);
-    }, 4000);
-
-    return () => clearInterval(interval);
-  }, []);
 
   const scrollToSection = (id: string) => {
     const section = document.getElementById(id);
     if (!section) return;
 
-    const navbarHeight = 80; // adjust if your navbar is fixed
+    const navbarHeight = 80;
     const top =
       section.getBoundingClientRect().top + window.pageYOffset - navbarHeight;
 
@@ -32,10 +20,10 @@ const Hero: React.FC = () => {
       id="about"
       className="hero"
       style={{
-        backgroundImage:mountainImg,
+        backgroundImage: `url(${mountainImg})`,
       }}
     >
-      {/* Gradient/Glassy Overlay */}
+      {/* Overlay */}
       <div className="hero-overlay"></div>
 
       {/* Navbar */}
@@ -59,11 +47,12 @@ const Hero: React.FC = () => {
         </h1>
 
         <p>
-          Interactive Lessons, Engaging Games, And Personalized Learning Paths.
+          Discover breathtaking destinations and unforgettable travel
+          experiences.
         </p>
 
         <div className="hero-buttons">
-          <button className="primary-btn">Get started</button>
+          <button className="primary-btn">Get Started</button>
         </div>
       </div>
 
