@@ -1,10 +1,9 @@
 import React, { useEffect, useState } from "react";
 import "../css/Hero.css";
-import greenTravelGuide from "../assets/Green-Travel-Guide.jpg";
-import binturHeader from "../assets/nature-banner.jpg";
-import timBroadbent from "../assets/nature-banner-1.jpg";
+import mountainImg from "../assets/beautiful-landscape-with-blue-sky.jpg.jpeg";
 
-const heroImages = [greenTravelGuide, binturHeader, timBroadbent];
+
+const heroImages = [mountainImg];
 
 const Hero: React.FC = () => {
   const [current, setCurrent] = useState(0);
@@ -33,7 +32,7 @@ const Hero: React.FC = () => {
       id="about"
       className="hero"
       style={{
-        backgroundImage: `url(${heroImages[current]})`,
+        backgroundImage:mountainImg,
       }}
     >
       {/* Gradient/Glassy Overlay */}
