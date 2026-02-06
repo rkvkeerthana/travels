@@ -1,0 +1,99 @@
+import React, { useEffect, useState } from "react";
+import "../css/Hero.css";
+import greenTravelGuide from "../assets/Green-Travel-Guide.jpg";
+import binturHeader from "../assets/nature-banner.jpg";
+import timBroadbent from "../assets/nature-banner-1.jpg";
+
+const heroImages = [greenTravelGuide, binturHeader, timBroadbent];
+
+const Hero: React.FC = () => {
+  const [current, setCurrent] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrent((prev) => (prev + 1) % heroImages.length);
+    }, 4000);
+
+    return () => clearInterval(interval);
+  }, []);
+
+  const scrollToSection = (id: string) => {
+    const section = document.getElementById(id);
+    if (!section) return;
+
+    const navbarHeight = 80; // adjust if your navbar is fixed
+    const top =
+      section.getBoundingClientRect().top + window.pageYOffset - navbarHeight;
+
+    window.scrollTo({ top, behavior: "smooth" });
+  };
+
+  return (
+    <section
+      id="about"
+      className="hero"
+      style={{
+        backgroundImage: `url(${heroImages[current]})`,
+      }}
+    >
+      {/* Gradient/Glassy Overlay */}
+      <div className="hero-overlay"></div>
+
+      {/* Navbar */}
+      <nav className="navbar">
+        <div className="logo">Devbeans</div>
+
+        <ul className="nav-links">
+          <li onClick={() => scrollToSection("home")}>Home</li>
+          <li onClick={() => scrollToSection("services")}>Our Services</li>
+          <li onClick={() => scrollToSection("explore")}>Explore</li>
+          <li onClick={() => scrollToSection("contact")}>Contact</li>
+        </ul>
+
+        <button className="nav-btn">Book Now</button>
+      </nav>
+
+      {/* Hero Content */}
+      <div className="hero-content">
+        <h1>
+          Adventure Starts With <br /> Your Journey
+        </h1>
+
+        <p>
+          Interactive Lessons, Engaging Games, And Personalized Learning Paths.
+        </p>
+
+        <div className="hero-buttons">
+          <button className="primary-btn">Get started</button>
+        </div>
+      </div>
+
+      {/* Search Box */}
+      <div className="search-box">
+        <div className="search-item">
+          <label>Select Tour Place</label>
+          <input type="text" placeholder="Jakarta" />
+        </div>
+
+        <div className="search-item">
+          <label>Check in</label>
+          <input type="date" />
+        </div>
+
+        <div className="search-item">
+          <label>Check out</label>
+          <input type="date" />
+        </div>
+
+        <div className="search-item">
+          <label>Travelers</label>
+          <input type="number" placeholder="2" />
+        </div>
+
+        <button className="search-btn">Plan Trip</button>
+      </div>
+    </section>
+  );
+};
+
+export default Hero;

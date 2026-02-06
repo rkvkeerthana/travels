@@ -1,0 +1,107 @@
+/* =======================
+   PACKAGES
+======================= */
+
+.packages {
+  background: #000;
+  color: white;
+  display: flex;
+  height: 500px;
+  padding: 60px 0px 60px 60px;
+  margin-bottom: 60px;
+  position: relative;
+}
+
+/* =======================
+   LEFT CARD (40%)
+======================= */
+
+.package-card {
+  width: 40%;
+  background: #fff;
+  border-radius: 16px;
+  position: relative;
+  z-index: 2;
+  margin-right: -60px; /* overlap image */
+  padding: 20px 0;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+}
+
+.package-card h2 {
+  margin-top: 20px;
+  margin-left: 20px;
+  color: #25e92f;
+  font-size: 36px;
+}
+
+.package-card p {
+  color: #000;
+  margin-left: 20px;
+  padding: 2px;
+}
+
+.small-text-para {
+  font-size: 12px;
+}
+
+.package-card ul {
+  list-style: none;
+  padding: 0;
+  color: #000;
+  margin-left: 20px;
+}
+
+.package-card li {
+  margin: 10px 0;
+}
+
+/* =======================
+   TITLE UNDERLINE
+======================= */
+
+.title-underline {
+  width: 270px;
+  height: 2px;
+  background-color: #25e92f;
+  margin: 6px 0 14px 20px;
+  border-radius: 2px;
+  margin-left: 2px;
+}
+
+/* =======================
+   RIGHT IMAGE (60%)
+======================= */
+
+.package-image {
+  width: 60%;
+  border-radius: 0px 16px 16px 0px;
+ /* Nature trail */
+background: url("https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=1600&q=80") center / cover no-repeat;
+
+  position: relative;
+  z-index: 1;
+}
+
+/* =======================
+   RESPONSIVE (MOBILE)
+======================= */
+
+@media (max-width: 768px) {
+  .packages {
+    flex-direction: column;
+    height: auto;
+    padding: 20px;
+  }
+
+  .package-card {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: -40px;
+  }
+
+  .package-image {
+    width: 100%;
+    height: 300px;
+    border-radius: 16px;
+  }
+}

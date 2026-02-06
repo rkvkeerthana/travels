@@ -1,0 +1,54 @@
+.steps-section {
+    padding: 80px 60px;
+    background: #fff;
+}
+
+.steps-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 60px;
+    align-items: start;
+}
+
+/* LEFT */
+.steps-left h2 {
+    font-size: 36px;
+    margin-bottom: 16px;
+}
+
+.steps-left p {
+    color: #777;
+    line-height: 1.6;
+}
+
+/* GRID */
+.steps-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+}
+
+/* CARD */
+.step-card {
+    padding: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+}
+.step-card:hover {
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+}
+.step-number {
+    font-size: 14px;
+    color: #25e92f;
+    font-weight: 600;
+}
+
+.step-card h4 {
+    font-size: 18px;
+    margin: 8px 0;
+}
+
+.step-card p {
+    color: #666;
+    font-size: 14px;
+    line-height: 1.6;
+}

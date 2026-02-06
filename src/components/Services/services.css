@@ -1,0 +1,60 @@
+/* =======================
+   SERVICES
+======================= */
+.services {
+    margin-bottom: 60px;
+    
+}
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    justify-items: center;
+}
+
+.service-card {
+    background: white;
+    padding: 24px;
+    width: 100%;
+    height: 260px;
+    border-radius: 18px;
+    text-align: center;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+    /* center content vertically */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.service-card:hover {
+    background: white;
+    padding: 24px;
+    width: 100%;
+    height: 260px;
+   
+   
+    text-align: center;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+    /* center content vertically */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.service-card span {
+    font-size: 28px;
+}
+.services h2 {
+    font-size: 36px;
+    
+}
+
+.service-card h4 {
+    margin: 12px 0 6px;
+    
+}
+.green-icon {
+  color: #25e92f;
+  font-size: 25px;   /* adjust size if needed */
+}

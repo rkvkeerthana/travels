@@ -1,0 +1,43 @@
+/* =======================
+   GLOBAL
+======================= */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  
+  color: #222;
+}
+
+.app {
+  margin: auto;
+  padding: 24px;
+}
+
+/* =======================
+   RESPONSIVE
+======================= */
+@media (max-width: 900px) {
+  .search-box {
+    flex-direction: column;
+  }
+
+  .stats {
+    flex-direction: column;
+  }
+
+  .service-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .packages {
+    flex-direction: column;
+  }
+
+  .testimonial-grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,97 @@
+/* JourneyCTA.css */
+
+.journey {
+  text-align: center;
+  padding: 80px 60px;
+  background: linear-gradient(to bottom, #ffffff, #eaf3ff);
+}
+
+.journey h2 {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.journey p {
+  max-width: 650px;
+  margin: 0 auto 25px;
+  font-size: 14px;
+  color: #666;
+  line-height: 1.6;
+}
+
+.journey-btn {
+  background: #000;
+  color: #25e92f;
+  border: none;
+  padding: 14px 26px;
+  border-radius: 25px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-bottom: 50px;
+}
+
+/* Images Row */
+.journey-images {
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* more gap for bigger cards */
+  flex-wrap: wrap;
+}
+
+/* Card Styles */
+.image-card {
+  width: 250px;       /* increased width */
+  height: 250px;      /* increased height */
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+  position: relative;
+}
+
+/* Zig-Zag Effect */
+.image-card:nth-child(odd) {
+  transform: translateY(20px); /* odd cards down */
+}
+
+.image-card:nth-child(even) {
+  transform: translateY(-20px); /* even cards up */
+}
+
+/* Hover Effect */
+.image-card:hover {
+  transform: translateY(0) scale(1.05);
+  z-index: 2;
+}
+
+.image-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .image-card {
+    width: 200px;
+    height: 200px;
+  }
+  .image-card:nth-child(odd) {
+    transform: translateY(50px);
+  }
+  .image-card:nth-child(even) {
+    transform: translateY(-50px);
+  }
+}
+
+@media (max-width: 768px) {
+  .journey h2 {
+    font-size: 26px;
+  }
+  .image-card {
+    width: 160px;
+    height: 160px;
+    transform: translateY(0) !important; /* remove zig-zag on mobile */
+  }
+}
